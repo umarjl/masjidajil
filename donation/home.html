@@ -1,29 +1,4 @@
-<?php 
 
-class donation
-{
-	public $dbname = 'donation';
-	public $connectdb;
-
-	function __construct()
-	{
-		$this->connectdb = new mysqli($this->dbname);
-		if($this->connectdb->connect_error)
-		{
-			die("connection failed");
-		}
-	}
-
-	public function update_sijil($up_name,$up_mobile)
-	{
-		$update_sijil_select = "update sijil set name='$up_name',mobile='$up_mobile'";
-		$update_sijil_run = $this->connectdb->query($update_sijil_select);
-		return $update_sijil_run;
-	}
-
-	
-
-}
 
 ?>
 <!DOCTYPE html>
